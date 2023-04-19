@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Public Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+.btn{
+    outline: 0;
+    border: 0;
+}
+section {
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+/* header-section */
+.nav-start{
+    background: url("../Images/header-bg.png");
+    /* height: 758px; */
+    color: #fff;
+    max-width: 1440px;
+    /* position: relative;
+    top: 0; */
+}
+
+/* navbar-section */
+
+.navbar-brand {
+    color: #fff;
+}
+/* .navbar .navbar-nav .nav-link.active{
+    color: red;
+} */
+.nav-main ul li {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #fff;
+}
+.navbar .navbar-nav .nav-link:last-child {
+border: 1px solid #fff;
+border-radius: 4px;
+padding: 12px 24px 12px 24px;
+text-transform: capitalize;
+font-size: 16px;
+font-weight: 400;
+line-height: 22px;
+letter-spacing: 0em;
+text-align: center;
+color: #fff;
+}
+.navbar .navbar-nav .nav-link {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+
+.card{
+    height: 512px;
+    border: 0;
+    box-shadow: 2px 2px 2px 2px gray;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.card:hover{
+    box-shadow: 4px 4px 4px 2px gray;
+}
+.card .card-img-top{
+    height: 240px;
+}
+.card .card-title{
+    padding-top: 12px;
+}
+.card-img{
+    position: relative;
+}
+.card:hover .empty-img{
+    position: absolute;
+    background: linear-gradient( rgba(6, 57, 213, 0.37) , rgba(59, 77, 129, 0.57));
+    inset: 0;
+    border-radius: 8px;
+    
+}
+
+
+
+
+
+
+
+/* footer */
+#footer h5{
+    font-weight: 800;
+    color: #4A60A1;
+   }
+   #footer ul{
+       line-height: 34px;
+       margin-top: 2em;
+   }
+   #footer ul li a{
+       color:rgb(1, 33, 46);
+       transition: all 0.34s;
+   }
+   #footer ul li a:hover{
+       text-decoration: underline;
+   }
+   .foot .col{
+       margin-left: 25px;
+       padding: 10px;
+       text-align: center;
+       color: #fff;
+       background:rgb(1, 33, 46);
+   }
+   .foot .col i{
+       color: #fff;
+   }
+
+
+
+
+@media (min-width: 992px){
+    
+    /* header-section */
+    .offcanvas {
+        background: url("../Images/header-bg.png");
+    }
+    .nav-main {
+        display: flex;
+        padding-top: 15px;
+    }
+
+    .nav-main ul {
+        display: flex;
+    }
+    .navbar .navbar-nav .nav-link:not(:last-child){
+        padding-top: 15px;
+    }
+    .nav-main ul li {
+        margin-left: 55px;
+    }
+    .navbar .navbar-nav .nav-link:hover{
+        color: rgba(255, 255, 255,0.56);
+        cursor: pointer;
+    }
+    .navbar .navbar-nav .nav-link:hover:not(:last-child)::before{
+        width: 80px;
+    }
+    .navbar .navbar-nav .nav-link:not(:last-child)::before{
+        position: absolute;
+        content: '';
+        inset: 0;
+        background: #fff;
+        width:0;
+        height: 2px;
+        transform: translateY(40px);
+    }
+    .navbar .navbar-nav .nav-link{
+        margin-left: 20px;
+        position: relative;
+        transition: all 0.85s;
+    }
+
+    .last {
+        position: relative;
+    }
+
+    .last::before {
+        position: absolute;
+        content: '';
+        width: 2px;
+        height: 30px;
+        background: #fff;
+        left: -20px;
+        top: -5px;
+    }
+
+    /* navbar */
+    .navbar {
+        padding: 20px;
+    }
+
+}
+
+
+
+@media (max-width: 568px){
+     /* header */
+     .nav-start{
+        padding: 6px;
+     }
+     .offcanvas {
+        height: auto;
+        background: url("../Images/header-bg.png");
+    }
+    [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+        color: #fff;
+    }
+    .nav-main ul {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 0;
+        padding-left: 0;
+        padding-top: 10px;
+    }
+
+    footer img{
+        width: 200px;
+    }
+
+}
